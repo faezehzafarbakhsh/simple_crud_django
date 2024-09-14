@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Student List
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2>Student List</h2>
+
+        <div class="card">
+            <div class="list-group">
+                {% for student in students %}
+                    <a href="/detail/{{student.id}}" class="list-group-item list-group-item-action">
+                        {{ student.first_name }} {{ student.last_name }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'student',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'simple_crud_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'simple_crud_django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'faezeh',   # نام دیتابیس PostgreSQL
+        'USER': 'postgres',   # نام کاربر دیتابیس
+        'PASSWORD': '13730107',    # رمز عبور کاربر
+        'HOST': 'localhost',            # آدرس سرور PostgreSQL (معمولا localhost)
+        'PORT': '5432',                 # پورت PostgreSQL (پیش‌فرض 5432 است)
     }
 }
 
