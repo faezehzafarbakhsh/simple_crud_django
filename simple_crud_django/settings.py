@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'simple_crud_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'faezeh',   # نام دیتابیس PostgreSQL
-        'USER': 'postgres',   # نام کاربر دیتابیس
-        'PASSWORD': '13730107',    # رمز عبور کاربر
-        'HOST': 'localhost',            # آدرس سرور PostgreSQL (معمولا localhost)
-        'PORT': '5432',                 # پورت PostgreSQL (پیش‌فرض 5432 است)
+        'NAME': 'faezeh',
+        'USER': 'postgres',
+        'PASSWORD': '13730107',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
